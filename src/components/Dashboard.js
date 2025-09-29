@@ -182,10 +182,10 @@ export class Dashboard {
     const lowStockEl = this.container.querySelector('#lowStock')
     const monthlySalesEl = this.container.querySelector('#monthlySales')
 
-    if (totalProductsEl) totalProductsEl.textContent = data.total_products || '-'
-    if (monthlyOrdersEl) monthlyOrdersEl.textContent = data.monthly_orders || '-'
-    if (lowStockEl) lowStockEl.textContent = data.low_stock_products || '-'
-    if (monthlySalesEl) monthlySalesEl.textContent = data.monthly_sales || '-'
+    if (totalProductsEl) totalProductsEl.textContent = data.inventory.total_products || '-'
+    if (monthlyOrdersEl) monthlyOrdersEl.textContent = data.sales.this_month_sales || '-'
+    if (lowStockEl) lowStockEl.textContent = data.inventory.low_stock_products || '-'
+    if (monthlySalesEl) monthlySalesEl.textContent = data.sales.this_month_sales || '-'
   }
 
   updateProductsTable(products) {
@@ -218,7 +218,7 @@ export class Dashboard {
           </span>
         </td>
         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-          $${product.sale_price || '0.00'}
+          $${product.price || '0.00'}
         </td>
       </tr>
     `).join('')
