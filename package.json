@@ -12,6 +12,7 @@
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
     "autoprefixer": "^10.4.16",
     "gh-pages": "^6.3.0",
     "postcss": "^8.4.32",
