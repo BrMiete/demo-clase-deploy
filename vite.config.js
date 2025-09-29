@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/pugin-react';
 
 export default defineConfig({
   server: {
@@ -10,6 +9,5 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true
   },
-  plugins: [react()],
   base: '/demo-clase-deploy/'
 });
